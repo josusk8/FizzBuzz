@@ -11,18 +11,18 @@ public class FizzBuzz {
             int[] imprimir = new int[100];
 
             imprimir[i] = i + 1;
-            int fizzbuzzComprare = i;
+            int fizzbuzzCompare = i;
 
             if ((i + 1) % 5 == 0 && (i + 1) % 3 == 0) {
                 System.out.println("FizzBuzz");
-                fizzbuzzComprare = -2;
+                fizzbuzzCompare = -2;
                 imprimir[i] = -1;
             }
-            if ((fizzbuzzComprare + 1) % 3 == 0) {
+            if ((fizzbuzzCompare + 1) % 3 == 0) {
                 System.out.println("Fizz");
                 imprimir[i] = -1;
             }
-            if ((fizzbuzzComprare + 1) % 5 == 0) {
+            if ((fizzbuzzCompare + 1) % 5 == 0) {
                 System.out.println("Buzz");
                 imprimir[i] = -1;
             }
