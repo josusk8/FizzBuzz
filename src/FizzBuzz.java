@@ -1,33 +1,35 @@
+import static java.lang.Integer.*;
+
 public class FizzBuzz {
-    int[] numeros;
 
     public FizzBuzz() {
-        numeros = new int[100];
+
     }
 
     public void mostrar() {
 
-        for (int i = 0; i < numeros.length; i++) {
-            numeros[i] = i + 1;
-
-            if (i % 3 == 0) {
-                if(i%5 == 0){
-                    System.out.println("FizzBuzz");
-                }
-                else {
-                    System.out.println("Fizz");
-                }
+        for (int i = 0; i < 100; i++) {
+            int [] a = new int[100];
+            a[i] = i+1;
+            if ((i + 1) % 5 == 0 && (i + 1) % 3 == 0) {
+                System.out.println("FizzBuzz");
+                a[i]= -1;
             }
-            if (i % 5 == 0){
-
+            if ((i + 1) % 3 == 0) {
+                System.out.println("Fizz");
+                a[i]= -1;
+            }
+            if ((i + 1) % 5 == 0) {
                 System.out.println("Buzz");
+                a[i]= -1;
             }
-            else{
-                System.out.println(numeros[i]);
+            if (a[i] >0){
+                System.out.println(a[i]);
             }
+
+
 
         }
-
     }
-
 }
+
