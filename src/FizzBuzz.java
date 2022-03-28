@@ -6,32 +6,36 @@ public class FizzBuzz {
 
     }
 
-    public void mostrar() {
-        for (int i = 0; i < 100; i++) {
-            int[] imprimir = new int[100];
+    static void mostrar() {
 
-            imprimir[i] = i + 1;
-            int fizzbuzzCompare = i;
+        int numero = 1;
 
-            if ((i + 1) % 5 == 0 && (i + 1) % 3 == 0) {
+        while (numero <= 100) {
+            int entrada = 1000;
+
+            if (numero % 5 == 0 && numero % 3 == 0) {
                 System.out.println("FizzBuzz");
-                fizzbuzzCompare = -2;
-                imprimir[i] = -1;
+                entrada = numero;
+                numero++;
             }
-            if ((fizzbuzzCompare + 1) % 3 == 0) {
-                System.out.println("Fizz");
-                imprimir[i] = -1;
-            }
-            if ((fizzbuzzCompare + 1) % 5 == 0) {
+            if (entrada > numero && numero % 5 == 0) {
                 System.out.println("Buzz");
-                imprimir[i] = -1;
+                entrada = numero;
+                numero++;
             }
-            if (imprimir[i] > 0) {
-                System.out.println(imprimir[i]);
+            if (entrada > numero && numero % 3 == 0) {
+                System.out.println("Fizz");
+                entrada = numero;
+                numero++;
             }
-
+            if (entrada > numero) {
+                System.out.println(numero);
+                numero++;
+            }
 
         }
+        
     }
 }
+
 
