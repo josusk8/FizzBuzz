@@ -35,7 +35,10 @@ public class FizzBuzz {
             }
 
         }
+<<<<<<< Updated upstream
         System.out.println(numeros);
+=======
+>>>>>>> Stashed changes
 
     }
 }
